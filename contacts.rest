@@ -3,3 +3,31 @@ GET http://localhost:3000/contacts
 
 ### Get single contact by id
 GET http://localhost:3000/contacts/6a4c2a39d671628332e45de3
+
+
+### Create a contact
+POST http://localhost:3000/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Naledi",
+  "lastName": "Dlamini",
+  "email": "naledi@gmail.com",
+  "favoriteColor": "Purple",
+  "birthday": "2000-01-15"
+}
+
+### Update a contact
+PUT http://localhost:3000/contacts/6a5555577017f387961dd12b
+Content-Type: application/json
+
+{
+  "firstName": "Naledi",
+  "lastName": "Dlamini",
+  "email": "naledi.updated@gmail.com",
+  "favoriteColor": "Teal",
+  "birthday": "2000-01-15"
+}
+
+### Delete a contact
+DELETE http://localhost:3000/contacts/6a5555577017f387961dd12b

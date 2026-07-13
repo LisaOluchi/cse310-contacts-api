@@ -1,5 +1,5 @@
-require('dotenv').config();
-const { MongoClient } = require('mongodb');
+require("dotenv").config();
+const { MongoClient } = require("mongodb");
 
 const client = new MongoClient(process.env.MONGODB_URI);
 let db;
@@ -7,8 +7,8 @@ let db;
 async function connectDB() {
   if (db) return db;
   await client.connect();
-  db = client.db('contactsDB');
-  console.log('Connected to MongoDB');
+  db = client.db("contactsDB");
+  console.log("Connected to MongoDB");
   return db;
 }
 
